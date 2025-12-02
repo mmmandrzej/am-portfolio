@@ -1,8 +1,8 @@
 'use client';
 
-import Image from "next/image";
-import Link from "next/link";
 import { useTranslations } from 'next-intl';
+import Hero from "@/components/Hero";
+import Projects from '@/components/Projects';
 
 const profilePicture = "/images/am_picture.jpg"
 
@@ -10,58 +10,59 @@ export default function Home() {
   const t = useTranslations("HomePage");
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 p-6 transition-colors duration-500">
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 p-6 ">
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center mb-16">
-        <div className="bg-white dark:bg-gray-800 shadow-2xl rounded-3xl p-10 max-w-lg w-full text-center border border-gray-200 dark:border-gray-700 transition-colors duration-500">
-          <div className="flex justify-center mb-6">
-            <Image
-              src={profilePicture}
-              alt="Profile"
-              width={120}
-              height={120}
-              className="rounded-full shadow-md border-4 border-[#4a6f54]"
-            />
-          </div>
-          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 transition-colors duration-500">{t('fullName')}</h1>
-          <p className="text-gray-700 dark:text-gray-300 mb-8 text-lg leading-relaxed transition-colors duration-500">
-            Experienced Software Engineer with over a decade in banking, insurance, and public sectors. Passionate about building reliable solutions and improving user experience.
-          </p>
-          <div className="flex justify-center space-x-8 mb-8">
-            <Link href="https://github.com/yourprofile" className="text-[#4a6f54] dark:text-green-400 font-semibold hover:underline text-lg transition-colors duration-500" target="_blank">GitHub</Link>
-            <Link href="https://linkedin.com/in/yourprofile" className="text-[#4a6f54] dark:text-green-400 font-semibold hover:underline text-lg transition-colors duration-500" target="_blank">LinkedIn</Link>
-          </div>
-          <a href="mailto:your@email.com" className="inline-block px-8 py-4 bg-[#4a6f54] dark:bg-green-700 text-white rounded-xl font-semibold text-lg hover:bg-[#3e5a45] dark:hover:bg-green-800 transition shadow-md">
-            {t('contact')}
-          </a>
-        </div>
-      </section>
+      <Hero
+        profilePicture={profilePicture}
+        fullName={t('fullName')}
+        shortDescription={t('shortDescription')}
+        contactEmail="your@email.com"
+      />
 
 
       {/* Achievements Section */}
-      <section className="max-w-4xl mx-auto mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6 text-center transition-colors duration-500">{t('achievements')}</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 transition-colors duration-500">
-            <p className="text-gray-700 dark:text-gray-300">Led development of an internal banking dashboard, improving reporting efficiency for multiple teams.</p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 transition-colors duration-500">
-            <p className="text-gray-700 dark:text-gray-300">Streamlined insurance claim processing applications, enhancing client satisfaction and operational speed.</p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 transition-colors duration-500">
-            <p className="text-gray-700 dark:text-gray-300">Migrated legacy systems to modern stacks including React, Next.js, and Node.js, increasing maintainability.</p>
-          </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 transition-colors duration-500">
-            <p className="text-gray-700 dark:text-gray-300">Improved customer onboarding processes, reducing errors by 30% and optimizing team workflows.</p>
-          </div>
-        </div>
-      </section>
+      <section className="max-w-6xl mx-auto mb-16">
+  <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-8 text-center border-b border-gray-200 dark:border-gray-700 pb-2 transition-colors duration-500">
+    {t('achievements')}
+  </h2>
 
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    {/* Achievement Card 1 */}
+    <div className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-md p-6 rounded-2xl shadow-md border border-white/20 dark:border-white/10 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl overflow-hidden">
+      
+      {/* Subtle glow */}
+      <div className="absolute -inset-2 bg-emerald-500/10 rounded-2xl blur-2xl pointer-events-none"></div>
+      
+      {/* Content */}
+      <p className="relative text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+        <span className="font-semibold text-emerald-800 dark:text-green-400">✔</span>{" "}
+        Led development of an internal banking dashboard, improving reporting efficiency for multiple teams.
+      </p>
+    </div>
+
+    {/* Achievement Card 2 */}
+    <div className="relative bg-white/60 dark:bg-gray-800/60 backdrop-blur-md p-6 rounded-2xl shadow-md border border-white/20 dark:border-white/10 transition-all duration-300 hover:scale-[1.03] hover:shadow-xl overflow-hidden">
+      
+      {/* Subtle glow */}
+      <div className="absolute -inset-2 bg-emerald-500/10 rounded-2xl blur-2xl pointer-events-none"></div>
+      
+      {/* Content */}
+      <p className="relative text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
+        <span className="font-semibold text-emerald-800 dark:text-green-400">✔</span>{" "}
+        Streamlined insurance claim processing applications, enhancing client satisfaction and operational speed.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+    {/* Projects Section */}
+    <Projects />
 
       {/* Footer */}
-      <footer className="text-center text-gray-600 dark:text-gray-300 py-6 transition-colors duration-500">
-        &copy; {new Date().getFullYear()} {t('fullName')}. All rights reserved.
+      <footer className="text-center text-gray-600 dark:text-gray-300 py-6 ">
+        &copy; {new Date().getFullYear()} {t('fullName')}. {t('footerInfo')}
       </footer>
     </main>
   );

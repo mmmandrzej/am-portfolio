@@ -1,7 +1,15 @@
 {
   "HomePage": {
     "fullName": "Andrzej Moskalczuk",
+    "shortDescription": "Doświadczony inżynier oprogramowania z ponad dekadą doświadczenia w sektorze bankowym, ubezpieczeniowym i publicznym. Pasjonat tworzenia niezawodnych rozwiązań i poprawy doświadczenia użytkownika.",
     "contact": "Skontaktuj się ze mną",
-    "achievements": "Osiągnięcia"
+    "achievements": "Osiągnięcia",
+    "projects": "Projekty",
+    "footerInfo": "Wszelkie prawa zastrzeżone.",
+    "projectAName": "Internal Banking Dashboard",
+    "projectADescription": "Led development of an internal banking dashboard...",
+    "projectBName": "Insurance Claims App",
+    "projectBDescription": "Streamlined insurance claim processing applications...",
+    "viewProject": "View Project"
   }
 }

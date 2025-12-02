@@ -1,7 +1,15 @@
 {
   "HomePage": {
     "fullName": "Андрей Москальчук",
+    "shortDescription": "Опытный инженер-программист с более чем десятилетним стажем в банковском, страховом и государственном секторах. Увлечён созданием надежных решений и улучшением пользовательского опыта.",
     "contact": "Связаться со мной",
-    "achievements": "Достижения"
+    "achievements": "Достижения",
+    "projects": "Проекты",
+    "footerInfo": "Все права защищены.",
+    "projectAName": "Internal Banking Dashboard",
+    "projectADescription": "Led development of an internal banking dashboard...",
+    "projectBName": "Insurance Claims App",
+    "projectBDescription": "Streamlined insurance claim processing applications...",
+    "viewProject": "View Project"
   }
 }

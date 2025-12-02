@@ -25,7 +25,7 @@ export default function LanguageSwitcher() {
           className={`px-3 py-1 text-sm rounded-full transition
             ${
               locale === lng
-                ? "bg-[#4a6f54] text-white"
+                ? "bg-emerald-800 text-white"
                 : "text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700"
             }`}
         >
