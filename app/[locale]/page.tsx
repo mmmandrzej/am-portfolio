@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 p-6 transition-colors duration-500">
       {/* Dark Mode Toggle */}
-      <div className="fixed top-4 right-4 flex items-center space-x-2">
+      <div className="fixed top-4 left-4 flex items-center space-x-2">
         <span className="text-gray-900 dark:text-gray-100 text-sm">🌞</span>
         <button
           onClick={() => setDark(!dark)}

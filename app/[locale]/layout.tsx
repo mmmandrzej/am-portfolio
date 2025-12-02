@@ -5,6 +5,7 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import LanguageSwitcher from "../components/LanguageSwitcher";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,9 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
+      <header className="p-4 flex justify-end">
+          <LanguageSwitcher current={locale} />
+      </header>
       <body>
         <NextIntlClientProvider locale={locale}>
           {children}
