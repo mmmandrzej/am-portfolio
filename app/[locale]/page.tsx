@@ -2,41 +2,15 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 
-const fullName = "Andrzej Moskalczuk";
 const profilePicture = "/images/am_picture.jpg"
 
 export default function Home() {
   const t = useTranslations("HomePage");
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [dark]);
-
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 p-6 transition-colors duration-500">
-      {/* Dark Mode Toggle */}
-      <div className="fixed top-4 left-4 flex items-center space-x-2">
-        <span className="text-gray-900 dark:text-gray-100 text-sm">🌞</span>
-        <button
-          onClick={() => setDark(!dark)}
-          className={`w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-600 rounded-full p-1 transition-colors duration-300 ${
-            dark ? 'justify-end' : 'justify-start'
-          }`}
-        >
-          <div className="w-4 h-4 bg-white rounded-full shadow-md transition-transform duration-300"></div>
-        </button>
-        <span className="text-gray-900 dark:text-gray-100 text-sm">🌙</span>
-      </div>
-
 
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center mb-16">
@@ -50,7 +24,7 @@ export default function Home() {
               className="rounded-full shadow-md border-4 border-[#4a6f54]"
             />
           </div>
-          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 transition-colors duration-500">{fullName}</h1>
+          <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 transition-colors duration-500">{t('fullName')}</h1>
           <p className="text-gray-700 dark:text-gray-300 mb-8 text-lg leading-relaxed transition-colors duration-500">
             Experienced Software Engineer with over a decade in banking, insurance, and public sectors. Passionate about building reliable solutions and improving user experience.
           </p>
@@ -87,7 +61,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="text-center text-gray-600 dark:text-gray-300 py-6 transition-colors duration-500">
-        &copy; {new Date().getFullYear()} {fullName}. All rights reserved.
+        &copy; {new Date().getFullYear()} {t('fullName')}. All rights reserved.
       </footer>
     </main>
   );

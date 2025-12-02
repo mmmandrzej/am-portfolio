@@ -5,7 +5,8 @@ import {notFound} from 'next/navigation';
 import {routing} from '@/i18n/routing';
 
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import LanguageSwitcher from "../components/LanguageSwitcher";
+import Header from "@/components/Header";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,14 +36,17 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale} className={`${geistSans.variable} ${geistMono.variable}`}>
-      <header className="p-4 flex justify-end">
-          <LanguageSwitcher current={locale} />
-      </header>
+    <html 
+      lang={locale} 
+      className={`${geistSans.variable} ${geistMono.variable}`}
+    >
       <body>
+      <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
         <NextIntlClientProvider locale={locale}>
-          {children}
+          <Header />
+          <main>{children}</main>
         </NextIntlClientProvider>
+      </ThemeProvider>
       </body>
     </html>
   );
