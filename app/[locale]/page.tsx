@@ -1,0 +1,38 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import Hero from "@/components/Hero";
+import Projects from '@/components/Projects';
+import { personalInfo } from '@/data/personal';
+
+const profilePicture = "/images/am_picture.jpg"
+
+export default function Home() {
+  const t = useTranslations("HomePage");
+
+  return (
+    <main className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 p-6 ">
+
+      {/* Hero Section */}
+      <Hero
+        profilePicture={profilePicture}
+        fullName={t('fullName')}
+        shortDescription={t('shortDescription')}
+        contactButton={t('contact')}
+        contactEmail={personalInfo.email}
+      />
+
+
+      {/* Achievements Section */}
+      {/* <Achievements /> */}
+
+      {/* Projects Section */}
+      <Projects />
+
+      {/* Footer */}
+      <footer className="text-center text-gray-600 dark:text-gray-300 py-6 ">
+        &copy; {new Date().getFullYear()} {t('fullName')}. {t('footerInfo')}
+      </footer>
+    </main>
+  );
+}

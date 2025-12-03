@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "fullName": "Андрей Москальчук",
+    "shortDescription": "Опытный инженер-программист с более чем десятилетним стажем в банковском, страховом и государственном секторах. Увлечён созданием надежных решений и улучшением пользовательского опыта.",
+    "contact": "Связаться со мной",
+    "achievements": "Достижения",
+    "projects": "Проекты",
+    "footerInfo": "Все права защищены.",
+    "projectAName": "Моё Портфолио",
+    "projectADescription": "Чистое и адаптивное персональное портфолио, созданное на Next.js и Tailwind CSS, для представления моих проектов и опыта.",
+    "projectBName": "Insurance Claims App",
+    "projectBDescription": "Streamlined insurance claim processing applications...",
+    "viewProject": "Посмотреть Проект"
+  }
+}

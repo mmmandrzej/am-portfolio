@@ -1,0 +1,15 @@
+{
+  "HomePage": {
+    "fullName": "Andrzej Moskalczuk",
+    "shortDescription": "Doświadczony inżynier oprogramowania z ponad dekadą doświadczenia w sektorze bankowym, ubezpieczeniowym i publicznym. Pasjonat tworzenia niezawodnych rozwiązań i poprawy doświadczenia użytkownika.",
+    "contact": "Skontaktuj się ze mną",
+    "achievements": "Osiągnięcia",
+    "projects": "Projekty",
+    "footerInfo": "Wszelkie prawa zastrzeżone.",
+    "projectAName": "Moje Portfolio",
+    "projectADescription": "Czyste i responsywne portfolio stworzone w Next.js i Tailwind CSS, prezentujące moje projekty oraz doświadczenie.",
+    "projectBName": "Insurance Claims App",
+    "projectBDescription": "Streamlined insurance claim processing applications...",
+    "viewProject": "Zobacz Projekt"
+  }
+}
