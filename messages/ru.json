@@ -6,10 +6,10 @@
     "achievements": "Достижения",
     "projects": "Проекты",
     "footerInfo": "Все права защищены.",
-    "projectAName": "Internal Banking Dashboard",
-    "projectADescription": "Led development of an internal banking dashboard...",
+    "projectAName": "Моё Портфолио",
+    "projectADescription": "Чистое и адаптивное персональное портфолио, созданное на Next.js и Tailwind CSS, для представления моих проектов и опыта.",
     "projectBName": "Insurance Claims App",
     "projectBDescription": "Streamlined insurance claim processing applications...",
-    "viewProject": "View Project"
+    "viewProject": "Посмотреть Проект"
   }
 }
