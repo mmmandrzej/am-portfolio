@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AM Portfolio",
-  description: "AM Portfolio",
+  title: "Portfolio",
+  description: "Personal portfolio built with Next.js & Tailwind."
 };
 
 type Props = {
@@ -55,6 +55,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             `,
           }}
         />
+        <meta name="apple-mobile-web-app-title" content="AM" />
       </head>
       <body>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
