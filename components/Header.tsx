@@ -3,6 +3,8 @@
 import { useTranslations } from "next-intl";
 import dynamic from 'next/dynamic'
 import LanguageSwitcher from "./LanguageSwitcher";
+import Image from 'next/image'
+import Link from "next/link";
 
 const ThemeToggle = dynamic(() => import('./ThemeToggle'), { ssr: false })
 
@@ -15,7 +17,14 @@ export default function Header() {
       <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo / Name */}
         <div className="text-xl font-semibold text-gray-900 dark:text-gray-100">
-          {t("fullName")}
+        <Link 
+          href="/" 
+          scroll={true} 
+          aria-label="Home"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <Image src="/icon0.svg" alt="Logo" width={40} height={40} />
+        </Link>
         </div>
 
         {/* Right actions */}

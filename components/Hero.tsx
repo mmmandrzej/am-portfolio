@@ -21,8 +21,8 @@ export default function Hero({ profilePicture, fullName, shortDescription, conta
           <Image
             src={profilePicture}
             alt="Profile"
-            width={120}
-            height={120}
+            width={150}
+            height={150}
             className="rounded-full shadow-md border-4 border-emerald-800 z-10"
           />
           <div className="absolute -inset-2 rounded-full bg-emerald-500/8 blur-xl animate-fadeSlow pointer-events-none"></div>
@@ -32,7 +32,7 @@ export default function Hero({ profilePicture, fullName, shortDescription, conta
         <h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-gray-100 transition-colors duration-500">
           {fullName}
         </h1>
-        <p className="text-gray-700 dark:text-gray-300 mb-8 text-lg leading-relaxed transition-colors duration-500">
+        <p className="text-gray-700 dark:text-gray-300 mb-8 text-m leading-relaxed transition-colors duration-500">
           {shortDescription}
         </p>
 
