@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { Analytics } from '@vercel/analytics/next';
 
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import Header from "@/components/Header";
@@ -61,7 +62,10 @@ export default async function LocaleLayout({ children, params }: Props) {
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <NextIntlClientProvider locale={locale}>
             <Header />
-            <main>{children}</main>
+            <main>
+              {children}
+              <Analytics />
+            </main>
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
