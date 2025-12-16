@@ -5,11 +5,13 @@ import dynamic from 'next/dynamic'
 import LanguageSwitcher from "./LanguageSwitcher";
 import Image from 'next/image'
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 const ThemeToggle = dynamic(() => import('./ThemeToggle'), { ssr: false })
 
 export default function Header() {
   const t = useTranslations("HomePage");
+  const locale = useLocale();
 
   return (
     <header className="w-full border-b border-gray-300 dark:border-gray-700 
@@ -18,7 +20,7 @@ export default function Header() {
         {/* Logo / Name */}
         <div className="text-xl font-semibold text-gray-900 dark:text-gray-100">
         <Link 
-          href="/" 
+          href={`/${locale}`}
           scroll={true} 
           aria-label="Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
