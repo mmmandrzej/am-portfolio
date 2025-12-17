@@ -25,7 +25,7 @@ export default function Header() {
           aria-label="Home"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <Image src="/icon0.svg" alt="Logo" width={40} height={40} />
+          <Image src="/icon0.svg" alt="Logo" width={50} height={50} />
         </Link>
         </div>
 

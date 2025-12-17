@@ -4,6 +4,8 @@ import { useTranslations } from 'next-intl';
 import Hero from "@/components/Hero";
 import Projects from '@/components/Projects';
 import { personalInfo } from '@/data/personal';
+import AboutMe from '@/components/AboutMe';
+import ContactSection from '@/components/Contact';
 
 const profilePicture = "/images/am_picture.jpg"
 
@@ -22,12 +24,17 @@ export default function Home() {
         contactEmail={personalInfo.email}
       />
 
-
-      {/* Achievements Section */}
-      {/* <Achievements /> */}
+      {/* About Me Section */}
+      <AboutMe />
 
       {/* Projects Section */}
       <Projects />
+
+      {/* Contact Section */}
+      <ContactSection
+        contactButton={t('contact')}
+        contactEmail={personalInfo.email}
+      />
 
       {/* Footer */}
       <footer className="text-center text-gray-600 dark:text-gray-300 py-6 ">
