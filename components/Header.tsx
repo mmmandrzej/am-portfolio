@@ -17,10 +17,10 @@ export default function Header() {
   const t = useTranslations("HomePage");
 
   const navLinks = [
-    { name: "Home", href: "#home", icon: <Home className="w-4 h-4" /> },
-    { name: "About", href: "#about", icon: <User className="w-4 h-4" /> },
-    { name: "Projects", href: "#projects", icon: <Briefcase className="w-4 h-4" /> },
-    { name: "Contact", href: "#contact", icon: <Mail className="w-4 h-4" /> },
+    { name: t("nav.home"), href: "#home", icon: <Home className="w-4 h-4" /> },
+    { name: t("nav.about"), href: "#about", icon: <User className="w-4 h-4" /> },
+    { name: t("nav.projects"), href: "#projects", icon: <Briefcase className="w-4 h-4" /> },
+    { name: t("nav.contact"), href: "#contact", icon: <Mail className="w-4 h-4" /> },
   ];
 
   return (
@@ -34,12 +34,12 @@ export default function Header() {
           </Link>
 
           {/* DESKTOP NAVIGATION */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-x-6 lg:gap-x-8"> 
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors relative group"
+                className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors relative group whitespace-nowrap"
               >
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full" />

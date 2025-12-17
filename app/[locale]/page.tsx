@@ -21,7 +21,7 @@ export default function Home() {
         profilePicture={profilePicture}
         fullName={t('fullName')}
         shortDescription={t('shortDescription')}
-        contactButton={t('contact')}
+        contactButton={t('home.contact')}
         contactEmail={personalInfo.email}
       />
 
@@ -33,7 +33,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <ContactSection
-        contactButton={t('contact')}
+        contactButton={t('home.contact')}
         contactEmail={personalInfo.email}
       />
 

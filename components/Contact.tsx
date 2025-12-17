@@ -1,8 +1,9 @@
 import { personalInfo } from "@/data/personal";
 import { Mail, Github, Linkedin, MessageSquare, ArrowUpRight, MapPin } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type ContactProps = {
-    contactButton: String;
+    contactButton: string;
     contactEmail: string;
   };
 
@@ -11,6 +12,7 @@ export default function ContactSection({ contactEmail, contactButton }: ContactP
     { icon: <Github className="w-5 h-5" />, label: "GitHub", href: personalInfo.github, color: "hover:text-emerald-500" },
     { icon: <Linkedin className="w-5 h-5" />, label: "LinkedIn", href: personalInfo.linkedin, color: "hover:text-blue-500" },
   ];
+  const t = useTranslations("HomePage");
 
   return (
     <section id="contact" className="w-full py-20 transition-colors duration-300">
@@ -31,10 +33,10 @@ export default function ContactSection({ contactEmail, contactButton }: ContactP
               </div> */}
               
               <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Get in touch
+                {t('contact.title')}
               </h2>
               <p className="text-gray-600 dark:text-gray-400 text-lg mb-10 max-w-md mx-auto leading-relaxed">
-                I’m always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                {t('contact.description')}
               </p>
 
               {/* Main Email CTA */}
@@ -50,7 +52,7 @@ export default function ContactSection({ contactEmail, contactButton }: ContactP
             {/* Social Links Row */}
             <div className="pt-8 border-t border-gray-100 dark:border-gray-800/50">
               <p className="text-[10px] font-bold text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em] mb-6">
-                Connect elsewhere
+                {t('contact.socialsLabel')}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 {socials.map((social) => (

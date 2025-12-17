@@ -1,8 +1,16 @@
 {
   "HomePage": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "home": {
+      "contact": "Contact Me"
+    },
     "fullName": "Andrew Moskalczuk",
     "shortDescription": "Experienced Software Engineer with over a decade in banking, insurance, and public sectors. Passionate about building reliable solutions and improving user experience.",
-    "contact": "Contact Me",
     "achievements": "Achievements",
     "projects": "Projects",
     "footerInfo": "All rights reserved.",
@@ -10,6 +18,14 @@
     "projectADescription": "A clean, responsive personal portfolio built with Next.js and Tailwind CSS to present my work and experience.",
     "projectBName": "Insurance Claims App",
     "projectBDescription": "Streamlined insurance claim processing applications...",
-    "viewProject": "View Project"
+    "viewProject": "View Project",
+    "contact": {
+      "title": "Get in touch",
+      "description": "I’m always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
+      "socialsLabel": "Connect elsewhere"
+    },
+    "footer": {
+      "backToTop": "Back to top"
+    }
   }
 }
