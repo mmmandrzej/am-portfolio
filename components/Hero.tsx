@@ -13,7 +13,7 @@ type HeroProps = {
 
 export default function Hero({ profilePicture, fullName, shortDescription, contactButton, contactEmail }: HeroProps) {
   return (
-    <section id="hero" className="relative min-h-[80vh] flex flex-col items-center justify-center py-20 overflow-hidden transition-colors duration-500">
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center py-20 overflow-hidden transition-colors duration-500">
       {/* todo - min-h-screen instead of min-h-[80vh] */}
       
       {/* 1. Background Ambient Glow */}

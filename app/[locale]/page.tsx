@@ -6,6 +6,7 @@ import Projects from '@/components/Projects';
 import { personalInfo } from '@/data/personal';
 import AboutMe from '@/components/AboutMe';
 import ContactSection from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 const profilePicture = "/images/am_picture.jpg"
 
@@ -37,9 +38,10 @@ export default function Home() {
       />
 
       {/* Footer */}
-      <footer className="text-center text-gray-600 dark:text-gray-300 py-6 ">
-        &copy; {new Date().getFullYear()} {t('fullName')}. {t('footerInfo')}
-      </footer>
+      <Footer
+        fullName={t('fullName')}
+        footerInfo={t('footerInfo')}
+      />
     </main>
   );
 }

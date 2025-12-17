@@ -26,3 +26,8 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Prevents the header from covering the section title */
+}
