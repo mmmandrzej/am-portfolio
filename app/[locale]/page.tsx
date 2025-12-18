@@ -19,8 +19,8 @@ export default function Home() {
       {/* Hero Section */}
       <Hero
         profilePicture={profilePicture}
-        fullName={t('fullName')}
-        shortDescription={t('shortDescription')}
+        fullName={t('home.fullName')}
+        shortDescription={t('home.shortDescription')}
         contactButton={t('home.contact')}
         contactEmail={personalInfo.email}
       />
@@ -39,8 +39,8 @@ export default function Home() {
 
       {/* Footer */}
       <Footer
-        fullName={t('fullName')}
-        footerInfo={t('footerInfo')}
+        fullName={t('home.fullName')}
+        footerInfo={t('footer.footerInfo')}
       />
     </main>
   );

@@ -5,15 +5,15 @@ import { useTranslations } from "next-intl";
 import { ArrowRight, FolderCode } from "lucide-react";
 
 export default function Projects() {
-  const t = useTranslations("HomePage");
+  const t = useTranslations("HomePage.projects");
 
   return (
-    <section id="projects" className="w-full py-20 transition-colors duration-300">
+    <section id="projects" className="w-full py-2 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
-            {t("projects")}
+            {t("name")}
           </h2>
           <div className="h-1.5 w-16 bg-emerald-500 mx-auto rounded-full mb-6" />
         </div>

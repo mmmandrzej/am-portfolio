@@ -7,25 +7,47 @@
       "contact": "Contact"
     },
     "home": {
-      "contact": "Contact Me"
+      "contact": "Contact Me",
+      "fullName": "Andrew Moskalczuk",
+      "shortDescription": "Experienced Software Engineer with over a decade in banking, insurance, and public sectors. Passionate about building reliable solutions and improving user experience."
     },
-    "fullName": "Andrew Moskalczuk",
-    "shortDescription": "Experienced Software Engineer with over a decade in banking, insurance, and public sectors. Passionate about building reliable solutions and improving user experience.",
-    "achievements": "Achievements",
-    "projects": "Projects",
-    "footerInfo": "All rights reserved.",
-    "projectAName": "My Portfolio",
-    "projectADescription": "A clean, responsive personal portfolio built with Next.js and Tailwind CSS to present my work and experience.",
-    "projectBName": "Insurance Claims App",
-    "projectBDescription": "Streamlined insurance claim processing applications...",
-    "viewProject": "View Project",
+    "about": {
+      "name": "About Me",
+      "description": "I focus on building <highlight>reliable</highlight> applications, frameworks, pipelines, scripts.",
+      "exampleA": {
+        "title": "DevOps & CI/CD",
+        "description": "I design and implement end-to-end CI/CD pipelines from scratch, focusing on <highlight>reliability, fast feedback, and predictable deployments</highlight>. My goal is to remove manual steps and make delivery simple and repeatable",
+        "items": {
+          "pipelines": "Jenkins & GitLab CI Custom Pipelines",
+          "docker": "Dockerized build & release workflows",
+          "quality_gates": "Quality gates: tests, linting, security checks"
+        }
+      },
+      "exampleB": {
+        "title": "Backend Services",
+        "description": "Building production-ready backend services using <highlight>Go, Kotlin, Java, Groovy and Python</highlight>. My focus is on clean architecture, type-safe API contracts, and high observability.",
+        "items": {
+          "go": "Go services with Oapi Codegen Generator",
+          "kotlin": "Kotlin Spring Boot with OpenAPI Generator",
+          "python": "Python services",
+          "observability": "Containerized Microservices & Monitoring"
+        }
+      }
+    },
+    "projects": {
+      "name": "Projects",
+      "projectAName": "My Portfolio",
+      "projectADescription": "A clean, responsive personal portfolio built with Next.js and Tailwind CSS to present my work and experience.",
+      "viewProject": "View Project"
+    },
     "contact": {
       "title": "Get in touch",
       "description": "I’m always open to discussing new projects, creative ideas or opportunities to be part of your visions.",
       "socialsLabel": "Connect elsewhere"
     },
     "footer": {
-      "backToTop": "Back to top"
+      "backToTop": "Back to top",
+      "footerInfo": "All rights reserved."
     }
   }
 }

@@ -7,25 +7,47 @@
       "contact": "Kontakt"
     },
     "home": {
-      "contact": "Skontaktuj się ze mną"
+      "contact": "Skontaktuj się ze mną",
+      "fullName": "Andrzej Moskalczuk",
+      "shortDescription": "Doświadczony inżynier oprogramowania z ponad dekadą doświadczenia w sektorze bankowym, ubezpieczeniowym i publicznym. Pasjonat tworzenia niezawodnych rozwiązań i poprawy doświadczenia użytkownika."
     },
-    "fullName": "Andrzej Moskalczuk",
-    "shortDescription": "Doświadczony inżynier oprogramowania z ponad dekadą doświadczenia w sektorze bankowym, ubezpieczeniowym i publicznym. Pasjonat tworzenia niezawodnych rozwiązań i poprawy doświadczenia użytkownika.",
-    "achievements": "Osiągnięcia",
-    "projects": "Projekty",
-    "footerInfo": "Wszelkie prawa zastrzeżone.",
-    "projectAName": "Moje Portfolio",
-    "projectADescription": "Czyste i responsywne portfolio stworzone w Next.js i Tailwind CSS, prezentujące moje projekty oraz doświadczenie.",
-    "projectBName": "Insurance Claims App",
-    "projectBDescription": "Streamlined insurance claim processing applications...",
-    "viewProject": "Zobacz Projekt",
+    "about": {
+      "name": "O mnie",
+      "description": "Skupiam się na tworzeniu <highlight>niezawodnych</highlight> aplikacji, frameworków, pipelinów oraz skryptów.",
+      "exampleA": {
+        "title": "DevOps & CI/CD",
+        "description": "Projektuję i wdrażam kompleksowe (end-to-end) pipeliny CI/CD od podstaw, kładąc nacisk na <highlight>niezawodność, szybką informację zwrotną oraz przewidywalność wdrożeń</highlight>. Moim celem jest wyeliminowanie kroków manualnych i sprawienie, by proces dostarczania był prosty i powtarzalny.",
+        "items": {
+          "pipelines": "Niestandardowe pipeliny CI/CD w Jenkins i GitLab",
+          "docker": "Zkonteneryzowane (Docker) procesy budowania i wydawania",
+          "quality_gates": "Quality gates: testy, linting, audyty bezpieczeństwa"
+        }
+      },
+      "exampleB": {
+        "title": "Serwisy Backendowe",
+        "description": "Budowanie gotowych do produkcji serwisów backendowych przy użyciu <highlight>Go, Kotlin, Java, Groovy i Python</highlight>. Koncentruję się na czystej architekturze, bezpiecznych typach kontraktów API oraz niezawodnym monitoringu.",
+        "items": {
+          "go": "Serwisy Go z wykorzystaniem Oapi Codegen Generator",
+          "kotlin": "Serwisy Kotlin z wykorzystaniem Spring Boot oraz OpenAPI Generator",
+          "python": "Serwisy Python",
+          "observability": "Konteneryzowane mikroserwisy i monitoring"
+        }
+      }
+    },
+    "projects": {
+      "name": "Projekty",
+      "projectAName": "Moje Portfolio",
+      "projectADescription": "Czyste i responsywne portfolio stworzone w Next.js i Tailwind CSS, prezentujące moje projekty oraz doświadczenie.",
+      "viewProject": "Zobacz Projekt"
+    },
     "contact": {
       "title": "Skontaktuj się ze mną",
       "description": "Zawsze jestem otwarty na rozmowy o nowych projektach, kreatywnych pomysłach lub możliwościach współtworzenia Twoich wizji.",
       "socialsLabel": "Znajdź mnie również tutaj"
     },
     "footer": {
-      "backToTop": "Wróć na górę"
+      "backToTop": "Wróć na górę",
+      "footerInfo": "Wszelkie prawa zastrzeżone."
     }
   }
 }
