@@ -4,6 +4,9 @@ import { useTranslations } from 'next-intl';
 import Hero from "@/components/Hero";
 import Projects from '@/components/Projects';
 import { personalInfo } from '@/data/personal';
+import AboutMe from '@/components/AboutMe';
+import ContactSection from '@/components/Contact';
+import Footer from '@/components/Footer';
 
 const profilePicture = "/images/am_picture.jpg"
 
@@ -16,23 +19,29 @@ export default function Home() {
       {/* Hero Section */}
       <Hero
         profilePicture={profilePicture}
-        fullName={t('fullName')}
-        shortDescription={t('shortDescription')}
-        contactButton={t('contact')}
+        fullName={t('home.fullName')}
+        shortDescription={t('home.shortDescription')}
+        contactButton={t('home.contact')}
         contactEmail={personalInfo.email}
       />
 
-
-      {/* Achievements Section */}
-      {/* <Achievements /> */}
+      {/* About Me Section */}
+      <AboutMe />
 
       {/* Projects Section */}
       <Projects />
 
+      {/* Contact Section */}
+      <ContactSection
+        contactButton={t('home.contact')}
+        contactEmail={personalInfo.email}
+      />
+
       {/* Footer */}
-      <footer className="text-center text-gray-600 dark:text-gray-300 py-6 ">
-        &copy; {new Date().getFullYear()} {t('fullName')}. {t('footerInfo')}
-      </footer>
+      <Footer
+        fullName={t('home.fullName')}
+        footerInfo={t('footer.footerInfo')}
+      />
     </main>
   );
 }

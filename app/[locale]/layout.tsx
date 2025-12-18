@@ -62,10 +62,8 @@ export default async function LocaleLayout({ children, params }: Props) {
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <NextIntlClientProvider locale={locale}>
             <Header />
-            <main>
-              {children}
-              <Analytics />
-            </main>
+            {children}
+            <Analytics />
           </NextIntlClientProvider>
         </ThemeProvider>
       </body>
