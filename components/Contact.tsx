@@ -42,9 +42,9 @@ export default function ContactSection({ contactEmail, contactButton }: ContactP
               {/* Main Email CTA */}
               <a
                 href={`mailto:${contactEmail}`}
-                className="group inline-flex items-center gap-3 px-10 py-5 bg-gray-900 dark:bg-emerald-500 text-white dark:text-gray-950 rounded-2xl font-bold text-lg transition-all hover:scale-[1.02] active:scale-95 shadow-xl hover:shadow-emerald-500/20 mb-12"
+                className="group inline-flex items-center gap-3 px-6 py-4 md:px-10 md:py-5 bg-gray-900 dark:bg-emerald-500 text-white dark:text-gray-950 rounded-2xl font-bold text-base md:text-lg transition-all hover:scale-[1.02] active:scale-95 shadow-xl hover:shadow-emerald-500/20 mb-12"
               >
-                <Mail className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                <Mail className="w-5 h-5 group-hover:rotate-12 shrink-0 transition-transform" />
                 {contactButton}
               </a>
             </div>
