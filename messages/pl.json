@@ -25,7 +25,7 @@
       },
       "exampleB": {
         "title": "Serwisy Backendowe",
-        "description": "Budowanie gotowych do produkcji serwisów backendowych przy użyciu <highlight>Go, Kotlin, Java, Groovy i Python</highlight>. Koncentruję się na czystej architekturze, bezpiecznych typach kontraktów API oraz niezawodnym monitoringu.",
+        "description": "Budowanie gotowych do produkcji serwisów backendowych przy użyciu <highlight>Go, Kotlin, Java i Python</highlight>. Koncentruję się na czystej architekturze, bezpiecznych typach kontraktów API oraz niezawodnym monitoringu.",
         "items": {
           "go": "Serwisy Go z wykorzystaniem Oapi Codegen Generator",
           "kotlin": "Serwisy Kotlin z wykorzystaniem Spring Boot oraz OpenAPI Generator",

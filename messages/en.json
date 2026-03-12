@@ -25,7 +25,7 @@
       },
       "exampleB": {
         "title": "Backend Services",
-        "description": "Building production-ready backend services using <highlight>Go, Kotlin, Java, Groovy and Python</highlight>. My focus is on clean architecture, type-safe API contracts, and high observability.",
+        "description": "Building production-ready backend services using <highlight>Go, Kotlin, Java, and Python</highlight>. My focus is on clean architecture, type-safe API contracts, and high observability.",
         "items": {
           "go": "Go services with Oapi Codegen Generator",
           "kotlin": "Kotlin Spring Boot with OpenAPI Generator",

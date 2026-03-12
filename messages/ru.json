@@ -25,7 +25,7 @@
       },
       "exampleB": {
         "title": "Backend сервисы",
-        "description": "Разработка готовых к эксплуатации бэкенд-сервисов с использованием <highlight>Go, Kotlin, Java, Groovy и Python</highlight>. Мое внимание сосредоточено на чистой архитектуре, типизированных API-контрактах и надёжном мониторинге.",
+        "description": "Разработка готовых к эксплуатации бэкенд-сервисов с использованием <highlight>Go, Kotlin, Java и Python</highlight>. Мое внимание сосредоточено на чистой архитектуре, типизированных API-контрактах и надёжном мониторинге.",
         "items": {
           "go": "Go сервисы с использованием Oapi Codegen Generator",
           "kotlin": "Сервисы Kotlin с использованием OpenAPI Generator и Spring Boot",
