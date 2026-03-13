@@ -32,18 +32,23 @@ export default function AboutMe() {
           </p>
         </div>
 
+        {/* Change the mapping to include index */}
         <div className="grid gap-8 md:grid-cols-2">
-          {ABOUT_CARDS.map(({ id, icon: Icon }) => {
-            // get the item keys dynamically from the translation file
-            // t.raw returns the actual object/array from your JSON
+          {ABOUT_CARDS.map(({ id, icon: Icon }, index) => {
             const itemsObj = t.raw(`sections.${id}.items`);
             const itemKeys = Object.keys(itemsObj);
 
+            // Logic: If it's the 5th item (index 4) and we are on md screens or larger
+            const isLastOddItem = index === 4;
+
             return (
-              <div 
-                key={id} 
-                className="group relative p-8 rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-emerald-500/50 dark:hover:border-emerald-400/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1"
+              <div
+                key={id}
+                className={`group relative p-8 rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 hover:border-emerald-500/50 dark:hover:border-emerald-400/50 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1
+          ${isLastOddItem ? "md:col-span-2 md:max-w-[calc(50%-1rem)] md:mx-auto w-full" : ""}
+        `}
               >
+                {/* ... rest of your card content ... */}
                 <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <Icon className="w-24 h-24 text-emerald-600" />
                 </div>
@@ -71,7 +76,6 @@ export default function AboutMe() {
                     {itemKeys.map((key) => (
                       <li key={key} className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400">
                         <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                        {/* access the specific item text */}
                         {t(`sections.${id}.items.${key}`)}
                       </li>
                     ))}

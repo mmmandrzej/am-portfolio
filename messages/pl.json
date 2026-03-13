@@ -77,7 +77,17 @@
       { "id": "observability", "label": "Monitoring i Observability", "skills": ["Prometheus", "Grafana", "Elasticsearch", "Kibana"] },
       { "id": "messaging", "label": "Komunikacja i Integracja", "skills": ["Kafka", "RabbitMQ"] },
       { "id": "ways-of-working", "label": "Metodyki i Dostarczanie", "skills": ["Scrum", "Agile", "CI/CD Process Ownership", "Release Management"] }
-    ]
+    ],
+    "footer": {
+      "totalStack": "Core Stack",
+      "technologies": "{count} Technologii",
+      "experience": "Doświadczenie",
+      "years": "{count}+ Lat",
+      "focus": "Specjalizacja",
+      "enterprise": "Enterprise"
+    },
+    "searchPlaceholder": "Szukaj umiejętności...",
+    "noResults": "Nie znaleziono umiejętności pasujących do \"{query}\""
   },
     "projects": {
       "name": "Projekty",
