@@ -17,14 +17,17 @@ const categoryColors: Record<string, string> = {
 
 export default function SkillsSection() {
   const t = useTranslations("HomePage.skills");
-  const [activeCategory, setActiveCategory] = useState("All");
+  
+  // 1. Change default to "backend" ID
+  const [activeCategory, setActiveCategory] = useState("backend");
   const [searchQuery, setSearchQuery] = useState("");
   const [visible, setVisible] = useState(false);
   const sectionRef = useRef(null);
 
   const groups = t.raw("groups") as { id: string; label: string; skills: string[] }[];
 
-  const { allSkills, categories } = useMemo(() => {
+  // 2. Process categories as Objects {id, label} instead of just strings
+  const { allSkills, categoryOptions } = useMemo(() => {
     const skills = groups.flatMap((group) =>
       group.skills.map((skill) => ({
         name: skill,
@@ -32,10 +35,17 @@ export default function SkillsSection() {
         categoryLabel: group.label,
       }))
     );
+    
     const uniqueSkills = Array.from(new Map(skills.map(s => [s.name, s])).values());
-    const cats = ["All", ...groups.map((g) => g.label)];
-    return { allSkills: uniqueSkills, categories: cats };
-  }, [groups]);
+    
+    // Create category list with IDs for logic and Labels for UI
+    const options = [
+      { id: "all", label: t('allLabel') || "All" }, 
+      ...groups.map((g) => ({ id: g.id, label: g.label }))
+    ];
+    
+    return { allSkills: uniqueSkills, categoryOptions: options };
+  }, [groups, t]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -46,9 +56,10 @@ export default function SkillsSection() {
     return () => observer.disconnect();
   }, []);
 
+  // 3. Filter using the ID
   const filteredSkills = useMemo(() => {
     return allSkills.filter((skill) => {
-      const matchesCategory = activeCategory === "All" || skill.categoryLabel === activeCategory;
+      const matchesCategory = activeCategory === "all" || skill.categoryId === activeCategory;
       const matchesSearch = skill.name.toLowerCase().includes(searchQuery.toLowerCase());
       return matchesCategory && matchesSearch;
     });
@@ -58,14 +69,14 @@ export default function SkillsSection() {
     <section ref={sectionRef} id="skills" className="w-full py-20 transition-colors duration-300">
       <div className="max-w-6xl mx-auto px-6">
         
-        {/* Header */}
+        {/* Header Section */}
         <div className={`text-center mb-10 transition-all duration-1000 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4">
             {t('title')}
           </h2>
           <div className="h-1 w-20 bg-emerald-600 mx-auto rounded-full mb-10" />
 
-          {/* Search Bar */}
+          {/* Search Bar - Fixed visibility in Dark Mode */}
           <div className="max-w-md mx-auto mb-8 relative group">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 group-focus-within:text-emerald-500 transition-colors" />
             <input
@@ -82,19 +93,19 @@ export default function SkillsSection() {
             )}
           </div>
           
-          {/* Filters */}
+          {/* Filters using ID for logic, Label for text */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
-            {categories.map((cat) => (
+            {categoryOptions.map((cat) => (
               <button
-                key={cat}
-                onClick={() => setActiveCategory(cat)}
+                key={cat.id}
+                onClick={() => setActiveCategory(cat.id)}
                 className={`px-4 py-2 rounded-xl font-medium text-[11px] uppercase tracking-wider transition-all border ${
-                  activeCategory === cat 
+                  activeCategory === cat.id 
                   ? "bg-emerald-600 border-emerald-600 text-white shadow-md" 
                   : "bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800 text-gray-500 dark:text-gray-400 hover:border-emerald-500/50"
                 }`}
               >
-                {cat}
+                {cat.label}
               </button>
             ))}
           </div>
@@ -108,7 +119,7 @@ export default function SkillsSection() {
               return (
                 <div
                   key={`${skill.name}-${i}`}
-                  className="group relative p-5 min-h-[140px] flex flex-col justify-start rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:border-emerald-500/50 dark:hover:border-emerald-400/50 hover:shadow-lg hover:-translate-y-1"
+                  className="group relative p-5 min-h-[100px] flex flex-col justify-start rounded-3xl bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 transition-all duration-300 hover:border-emerald-500/50 dark:hover:border-emerald-400/50 hover:shadow-lg hover:-translate-y-1"
                 >
                   <div 
                     className="w-2 h-2 rounded-full mb-3" 

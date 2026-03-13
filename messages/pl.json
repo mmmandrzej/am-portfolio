@@ -68,9 +68,9 @@
     },
     "skills": {
     "title": "Kluczowe Kompetencje Techniczne",
+    "allLabel": "Wszystkie",
     "groups": [
-      { "id": "core-stack", "label": "Core Stack", "skills": ["Java", "Spring Framework", "REST APIs", "SQL", "Docker", "Kubernetes", "Argo CD", "Jenkins", "GitLab CI/CD"] },
-      { "id": "backend", "label": "Inżynieria Backend", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Django", "REST", "Swagger / OpenAPI", "OAuth2", "JWT"] },
+      { "id": "backend", "label": "Inżynieria Backend", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Spring Framework", "REST", "Swagger / OpenAPI", "OAuth2", "JWT", "SQL"] },
       { "id": "test-automation", "label": "Automatyzacja i Wydajność", "skills": ["JUnit", "TestNG", "PyTest", "Robot Framework", "JMeter", "Locust", "Selenium"] },
       { "id": "devops", "label": "DevOps i Infrastruktura", "skills": ["Docker", "Kubernetes", "Argo CD", "Ansible", "Jenkins", "GitLab CI/CD", "Bash", "Groovy", "Ubuntu", "Jinja"] },
       { "id": "frontend", "label": "Frontend", "skills": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Material UI"] },

@@ -68,14 +68,14 @@
     },
     "skills": {
     "title": "Ключевые Технические Компетенции",
+    "allLabel": "Все",
     "groups": [
-      { "id": "core-stack", "label": "Основной Стек", "skills": ["Java", "Spring Framework", "REST APIs", "SQL", "Docker", "Kubernetes", "Argo CD", "Jenkins", "GitLab CI/CD"] },
-      { "id": "backend", "label": "Backend Разработка", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Django", "REST", "Swagger / OpenAPI", "OAuth2", "JWT"] },
+      { "id": "backend", "label": "Backend Разработка", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Spring Framework", "REST", "Swagger / OpenAPI", "OAuth2", "JWT", "SQL"] },
       { "id": "test-automation", "label": "Автоматизация и Тесты", "skills": ["JUnit", "TestNG", "PyTest", "Robot Framework", "JMeter", "Locust", "Selenium"] },
       { "id": "devops", "label": "DevOps и Инфраструктура", "skills": ["Docker", "Kubernetes", "Argo CD", "Ansible", "Jenkins", "GitLab CI/CD", "Bash", "Groovy", "Ubuntu", "Jinja"] },
       { "id": "frontend", "label": "Frontend", "skills": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Material UI"] },
       { "id": "observability", "label": "Мониторинг", "skills": ["Prometheus", "Grafana", "Elasticsearch", "Kibana"] },
-      { "id": "messaging", "label": "Очереди и Интеграция", "skills": ["Kafka", "RabbitMQ"] },
+      { "id": "messaging", "label": "Очереди Cообщений и Интеграция", "skills": ["Kafka", "RabbitMQ"] },
       { "id": "ways-of-working", "label": "Методологии и Доставка", "skills": ["Scrum", "Agile", "CI/CD Process Ownership", "Release Management"] }
     ],
     "footer": {
