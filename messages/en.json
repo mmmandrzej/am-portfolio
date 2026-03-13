@@ -13,26 +13,71 @@
     },
     "about": {
       "name": "About Me",
-      "description": "I focus on building <highlight>reliable</highlight> applications, frameworks, pipelines, scripts.",
-      "exampleA": {
-        "title": "DevOps & CI/CD",
-        "description": "I design and implement end-to-end CI/CD pipelines from scratch, focusing on <highlight>reliability, fast feedback, and predictable deployments</highlight>. My goal is to remove manual steps and make delivery simple and repeatable",
-        "items": {
-          "pipelines": "Jenkins & GitLab CI Custom Pipelines",
-          "docker": "Dockerized build & release workflows",
-          "quality_gates": "Quality gates: tests, linting, security checks"
-        }
-      },
-      "exampleB": {
-        "title": "Backend Services",
-        "description": "Building production-ready backend services using <highlight>Go, Kotlin, Java, and Python</highlight>. My focus is on clean architecture, type-safe API contracts, and high observability.",
-        "items": {
-          "go": "Go services with Oapi Codegen Generator",
-          "kotlin": "Kotlin Spring Boot with OpenAPI Generator",
-          "python": "Python services",
-          "observability": "Containerized Microservices & Monitoring"
+      "description": "I focus on building <highlight>reliable</highlight> applications, frameworks, pipelines, and scripts that thrive in enterprise environments.",
+      "sections": {
+        "backend": {
+          "title": "Core Backend Architecture",
+          "priority": 1,
+          "description": "Building robust services with <highlight>Kotlin, Java, Go, and Python</highlight>. I use a 'sandbox-first' approach to validate ideas quickly before scaling them into production-ready systems that work reliably across different languages.",
+          "items": {
+            "kotlin_java": "Spring Boot ecosystem with OpenAPI Maven generation",
+            "golang": "High-performance services using Oapi-codegen and Goa v3",
+            "business_first_approach": "Translating complex requirements into clean, scalable domain logic"
+          }
+        },
+        "devops": {
+          "title": "Pipeline & Reliability Engineering",
+          "priority": 2,
+          "description": "Keeping the delivery engine running. I build <highlight>automation tools and shared libraries</highlight> that help teams deploy faster and monitor their systems without the manual headache.",
+          "items": {
+            "ci_cd": "GitLab CI custom pipelines and Jenkins Shared Libraries",
+            "governance": "Automating JIRA updates and release tracking",
+            "monitoring": "Building Grafana dashboards and tracking SRE health metrics"
+          }
+        },
+        "quality": {
+          "title": "Automated Testing & Performance",
+          "priority": 3,
+          "description": "Building automated quality gates that guarantee <highlight>production readiness</highlight>. I build <highlight>automated test suites</highlight> that act as safety nets, so we can ship updates with confidence.",
+          "items": {
+            "frameworks": "API and E2E tests using Robot Framework, TestNG, PyTest and similar",
+            "load_testing": "Simulating heavy traffic with JMeter and Locust",
+            "web_tools": "UI automation with Selenium and standard testing libraries"
+          }
+        },
+        "distributed": {
+          "title": "Systems Integration & Security",
+          "priority": 4,
+          "description": "Connecting complex systems in <highlight>banking and insurance</highlight> environments. I handle the heavy lifting of making services talk to each other securely and reliably using modern messaging and identity standards.",
+          "items": {
+            "messaging": "Handling data flow with Kafka and RabbitMQ",
+            "identity": "Securing APIs with OAuth2, JWT, and certificate enrollment"
+          }
+        },
+        "frontend": {
+          "title": "Full-Stack Context",
+          "priority": 5,
+          "description": "Developing modern, type-safe interfaces with <highlight>React and TypeScript</highlight>. I ensure that complex backend capabilities are exposed through intuitive and performant internal dashboards.",
+          "items": {
+            "ui_stack": "Building responsive apps with React and TypeScript",
+            "styling": "Fast UI development with Tailwind CSS and Material UI",
+            "tooling": "Building responsive tools for internal operations"
+          }
         }
       }
+    },
+    "skills": {
+      "title": "Core Technical Expertise",
+      "groups": [
+        { "id": "core-stack", "label": "Core Stack", "skills": ["Java", "Spring Framework", "REST APIs", "SQL", "Docker", "Kubernetes", "Argo CD", "Jenkins", "GitLab CI/CD"] },
+        { "id": "backend", "label": "Backend Engineering", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Django", "REST", "Swagger / OpenAPI", "OAuth2", "JWT"] },
+        { "id": "test-automation", "label": "Test Automation & Performance", "skills": ["JUnit", "TestNG", "PyTest", "Robot Framework", "JMeter", "Locust", "Selenium"] },
+        { "id": "devops", "label": "DevOps & Infrastructure", "skills": ["Docker", "Kubernetes", "Argo CD", "Ansible", "Jenkins", "GitLab CI/CD", "Bash", "Groovy", "Ubuntu", "Jinja"] },
+        { "id": "frontend", "label": "Frontend", "skills": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Material UI"] },
+        { "id": "observability", "label": "Monitoring & Observability", "skills": ["Prometheus", "Grafana", "Elasticsearch", "Kibana"] },
+        { "id": "messaging", "label": "Messaging & Integration", "skills": ["Kafka", "RabbitMQ"] },
+        { "id": "ways-of-working", "label": "Delivery & Methodologies", "skills": ["Scrum", "Agile", "CI/CD Process Ownership", "Release Management"] }
+      ]
     },
     "projects": {
       "name": "Projects",
