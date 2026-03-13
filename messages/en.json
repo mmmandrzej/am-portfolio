@@ -68,9 +68,9 @@
     },
     "skills": {
       "title": "Core Technical Expertise",
+      "allLabel": "All",
       "groups": [
-        { "id": "core-stack", "label": "Core Stack", "skills": ["Java", "Spring Framework", "REST APIs", "SQL", "Docker", "Kubernetes", "Argo CD", "Jenkins", "GitLab CI/CD"] },
-        { "id": "backend", "label": "Backend Engineering", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Django", "REST", "Swagger / OpenAPI", "OAuth2", "JWT"] },
+        { "id": "backend", "label": "Backend Engineering", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Spring Framework", "REST", "Swagger / OpenAPI", "OAuth2", "JWT", "SQL"] },
         { "id": "test-automation", "label": "Test Automation & Performance", "skills": ["JUnit", "TestNG", "PyTest", "Robot Framework", "JMeter", "Locust", "Selenium"] },
         { "id": "devops", "label": "DevOps & Infrastructure", "skills": ["Docker", "Kubernetes", "Argo CD", "Ansible", "Jenkins", "GitLab CI/CD", "Bash", "Groovy", "Ubuntu", "Jinja"] },
         { "id": "frontend", "label": "Frontend", "skills": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Material UI"] },
