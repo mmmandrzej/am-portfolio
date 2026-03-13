@@ -13,27 +13,82 @@
     },
     "about": {
       "name": "Обо мне",
-      "description": "Я специализируюсь на создании <highlight>надежных</highlight> приложений, фреймворков, пайплайнов и скриптов.",
-      "exampleA": {
-        "title": "DevOps & CI/CD",
-        "description": "Я проектирую и внедряю end-to-end CI/CD пайплайны с нуля, уделяя особое внимание <highlight>надежности, быстрой обратной связи и предсказуемости развертывания</highlight>. Моя цель — исключить ручные операции и сделать процесс поставки простым и воспроизводимым.",
-        "items": {
-          "pipelines": "Кастомные пайплайны Jenkins и GitLab CI",
-          "docker": "Контейнеризированные (Docker) процессы сборки и релиза",
-          "quality_gates": "Quality gates: тесты, линтинг, проверки безопасности"
-        }
-      },
-      "exampleB": {
-        "title": "Backend сервисы",
-        "description": "Разработка готовых к эксплуатации бэкенд-сервисов с использованием <highlight>Go, Kotlin, Java, Groovy и Python</highlight>. Мое внимание сосредоточено на чистой архитектуре, типизированных API-контрактах и надёжном мониторинге.",
-        "items": {
-          "go": "Go сервисы с использованием Oapi Codegen Generator",
-          "kotlin": "Сервисы Kotlin с использованием OpenAPI Generator и Spring Boot",
-          "python": "Python сервисы",
-          "observability": "Контейнеризированные микросервисы и мониторинг"
+      "description": "Я специализируюсь на создании <highlight>надежных</highlight> приложений, фреймворков, пайплайнов и скриптов для работы в корпоративных средах.",
+      "sections": {
+        "backend": {
+          "title": "Архитектура Core Backend",
+          "priority": 1,
+          "description": "Разработка отказоустойчивых сервисов на <highlight>Kotlin, Java, Go и Python</highlight>. Я использую подход «sandbox-first» для быстрой проверки идей перед их масштабированием в готовые к эксплуатации системы, надежно работающие на разных языках.",
+          "items": {
+            "kotlin_java": "Экосистема Spring Boot с генерацией OpenAPI Maven",
+            "golang": "Высокопроизводительные сервисы с использованием Oapi-codegen и Goa v3",
+            "business_first_approach": "Перевод сложных требований в чистую, масштабируемую доменную логику"
+          }
+        },
+        "devops": {
+          "title": "Pipeline & Reliability Engineering",
+          "priority": 2,
+          "description": "Поддержка процессов доставки ПО. Я создаю <highlight>инструменты автоматизации и общие библиотеки</highlight>, которые помогают командам быстрее развертывать и мониторить системы без рутины.",
+          "items": {
+            "ci_cd": "Кастомные пайплайны GitLab CI и Jenkins Shared Libraries",
+            "governance": "Автоматизация обновлений JIRA и отслеживание релизов",
+            "monitoring": "Создание дашбордов в Grafana и отслеживание метрик SRE"
+          }
+        },
+        "quality": {
+          "title": "Автоматизация тестирования и производительность",
+          "priority": 3,
+          "description": "Создание автоматизированных порогов качества (quality gates), гарантирующих <highlight>готовность к релизу</highlight>. Я разрабатываю <highlight>наборы автотестов</highlight>, которые служат страховкой для уверенного выпуска обновлений.",
+          "items": {
+            "frameworks": "API и E2E тесты с использованием Robot Framework, TestNG, PyTest и аналогов",
+            "load_testing": "Симуляция высокой нагрузки с помощью JMeter и Locust",
+            "web_tools": "UI-автоматизация с Selenium и стандартными библиотеками тестирования"
+          }
+        },
+        "distributed": {
+          "title": "Интеграция систем и безопасность",
+          "priority": 4,
+          "description": "Соединение сложных систем в сферах <highlight>банковских услуг и страхования</highlight>. Я беру на себя техническую реализацию безопасного взаимодействия сервисов с использованием современных стандартов обмена сообщениями и идентификации.",
+          "items": {
+            "messaging": "Управление потоками данных через Kafka и RabbitMQ",
+            "identity": "Защита API с помощью OAuth2, JWT и управления сертификатами"
+          }
+        },
+        "frontend": {
+          "title": "Full-Stack контекст",
+          "priority": 5,
+          "description": "Разработка современных интерфейсов на <highlight>React и TypeScript</highlight>. Я обеспечиваю удобный доступ к сложным функциям бэкенда через интуитивно понятные и производительные внутренние панели управления.",
+          "items": {
+            "ui_stack": "Создание адаптивных приложений на React и TypeScript",
+            "styling": "Быстрая разработка UI с Tailwind CSS и Material UI",
+            "tooling": "Разработка адаптивных инструментов для внутренних операций"
+          }
         }
       }
     },
+    "skills": {
+    "title": "Ключевые Технические Компетенции",
+    "groups": [
+      { "id": "core-stack", "label": "Основной Стек", "skills": ["Java", "Spring Framework", "REST APIs", "SQL", "Docker", "Kubernetes", "Argo CD", "Jenkins", "GitLab CI/CD"] },
+      { "id": "backend", "label": "Backend Разработка", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Django", "REST", "Swagger / OpenAPI", "OAuth2", "JWT"] },
+      { "id": "test-automation", "label": "Автоматизация и Тесты", "skills": ["JUnit", "TestNG", "PyTest", "Robot Framework", "JMeter", "Locust", "Selenium"] },
+      { "id": "devops", "label": "DevOps и Инфраструктура", "skills": ["Docker", "Kubernetes", "Argo CD", "Ansible", "Jenkins", "GitLab CI/CD", "Bash", "Groovy", "Ubuntu", "Jinja"] },
+      { "id": "frontend", "label": "Frontend", "skills": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Material UI"] },
+      { "id": "observability", "label": "Мониторинг", "skills": ["Prometheus", "Grafana", "Elasticsearch", "Kibana"] },
+      { "id": "messaging", "label": "Очереди и Интеграция", "skills": ["Kafka", "RabbitMQ"] },
+      { "id": "ways-of-working", "label": "Методологии и Доставка", "skills": ["Scrum", "Agile", "CI/CD Process Ownership", "Release Management"] }
+    ],
+    "footer": {
+      "totalStack": "Весь Стек",
+      "technologies": "{count} Технологий",
+      "experience": "Опыт",
+      "years": "{count}+ Лет",
+      "focus": "Специализация",
+      "enterprise": "Enterprise"
+    },
+    "searchPlaceholder": "Поиск навыков...",
+    "noResults": "Навыки по запросу \"{query}\" не найдены"
+  },
     "projects": {
       "name": "Проекты",
       "projectAName": "Моё Портфолио",

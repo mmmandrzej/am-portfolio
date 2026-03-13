@@ -7,6 +7,7 @@ import { personalInfo } from '@/data/personal';
 import AboutMe from '@/components/AboutMe';
 import ContactSection from '@/components/Contact';
 import Footer from '@/components/Footer';
+import SkillsSection from '@/components/SkillsSection';
 
 const profilePicture = "/images/am_picture.jpg"
 
@@ -15,8 +16,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-700 p-6 ">
-
-      {/* Hero Section */}
       <Hero
         profilePicture={profilePicture}
         fullName={t('home.fullName')}
@@ -25,19 +24,14 @@ export default function Home() {
         contactEmail={personalInfo.email}
       />
 
-      {/* About Me Section */}
       <AboutMe />
-
-      {/* Projects Section */}
+      <SkillsSection />
       <Projects />
-
-      {/* Contact Section */}
       <ContactSection
         contactButton={t('home.contact')}
         contactEmail={personalInfo.email}
       />
-
-      {/* Footer */}
+      
       <Footer
         fullName={t('home.fullName')}
         footerInfo={t('footer.footerInfo')}

@@ -13,27 +13,82 @@
     },
     "about": {
       "name": "O mnie",
-      "description": "Skupiam się na tworzeniu <highlight>niezawodnych</highlight> aplikacji, frameworków, pipelinów oraz skryptów.",
-      "exampleA": {
-        "title": "DevOps & CI/CD",
-        "description": "Projektuję i wdrażam kompleksowe (end-to-end) pipeliny CI/CD od podstaw, kładąc nacisk na <highlight>niezawodność, szybką informację zwrotną oraz przewidywalność wdrożeń</highlight>. Moim celem jest wyeliminowanie kroków manualnych i sprawienie, by proces dostarczania był prosty i powtarzalny.",
-        "items": {
-          "pipelines": "Niestandardowe pipeliny CI/CD w Jenkins i GitLab",
-          "docker": "Zkonteneryzowane (Docker) procesy budowania i wydawania",
-          "quality_gates": "Quality gates: testy, linting, audyty bezpieczeństwa"
-        }
-      },
-      "exampleB": {
-        "title": "Serwisy Backendowe",
-        "description": "Budowanie gotowych do produkcji serwisów backendowych przy użyciu <highlight>Go, Kotlin, Java, Groovy i Python</highlight>. Koncentruję się na czystej architekturze, bezpiecznych typach kontraktów API oraz niezawodnym monitoringu.",
-        "items": {
-          "go": "Serwisy Go z wykorzystaniem Oapi Codegen Generator",
-          "kotlin": "Serwisy Kotlin z wykorzystaniem Spring Boot oraz OpenAPI Generator",
-          "python": "Serwisy Python",
-          "observability": "Konteneryzowane mikroserwisy i monitoring"
+      "description": "Skupiam się na budowaniu <highlight>niezawodnych</highlight> aplikacji, frameworków, rurociągów (pipelines) i skryptów, które sprawdzają się w środowiskach korporacyjnych.",
+      "sections": {
+        "backend": {
+          "title": "Architektura Core Backend",
+          "priority": 1,
+          "description": "Budowanie solidnych usług z wykorzystaniem <highlight>Kotlin, Java, Go i Python</highlight>. Stosuję podejście „sandbox-first”, aby szybko weryfikować pomysły przed skalowaniem ich do systemów produkcyjnych, które działają niezawodnie w różnych językach.",
+          "items": {
+            "kotlin_java": "Ekosystem Spring Boot z generowaniem OpenAPI Maven",
+            "golang": "Wydajne usługi przy użyciu Oapi-codegen i Goa v3",
+            "business_first_approach": "Przekładanie złożonych wymagań na czystą, skalowalną logikę domenową"
+          }
+        },
+        "devops": {
+          "title": "Pipelimy oraz Niezawodność",
+          "priority": 2,
+          "description": "Utrzymywanie silnika dostarczania w ruchu. Tworzę <highlight>narzędzia automatyzacji i biblioteki współdzielone</highlight>, które pomagają zespołom szybciej wdrażać i monitorować systemy bez ręcznej pracy.",
+          "items": {
+            "ci_cd": "Niestandardowe potoki GitLab CI i współdzielone biblioteki Jenkins",
+            "governance": "Automatyzacja aktualizacji JIRA i śledzenie wydań",
+            "monitoring": "Budowanie pulpitów nawigacyjnych Grafana i śledzenie metryk SRE"
+          }
+        },
+        "quality": {
+          "title": "Automatyzacja Testów i Wydajność",
+          "priority": 3,
+          "description": "Budowanie automatycznych bramek jakości, które gwarantują <highlight>gotowość produkcyjną</highlight>. Tworzę <highlight>zautomatyzowane zestawy testów</highlight>, które służą jako siatki bezpieczeństwa, pozwalając na pewne wdrażanie aktualizacji.",
+          "items": {
+            "frameworks": "Testy API i E2E przy użyciu Robot Framework, TestNG, PyTest i podobnych",
+            "load_testing": "Symulowanie dużego ruchu za pomocą JMeter i Locust",
+            "web_tools": "Automatyzacja UI z wykorzystaniem Selenium i standardowych bibliotek testowych"
+          }
+        },
+        "distributed": {
+          "title": "Integracja Systemów i Bezpieczeństwo",
+          "priority": 4,
+          "description": "Łączenie złożonych systemów w środowiskach <highlight>bankowych i ubezpieczeniowych</highlight>. Zajmuję się technicznymi aspektami bezpiecznej i niezawodnej komunikacji między usługami przy użyciu nowoczesnych standardów przesyłania wiadomości i tożsamości.",
+          "items": {
+            "messaging": "Zarządzanie przepływem danych za pomocą Kafka i RabbitMQ",
+            "identity": "Zabezpieczanie API za pomocą OAuth2, JWT i rejestracji certyfikatów"
+          }
+        },
+        "frontend": {
+          "title": "Kontekst Full-Stack",
+          "priority": 5,
+          "description": "Tworzenie nowoczesnych, bezpiecznych typologicznie interfejsów w <highlight>React i TypeScript</highlight>. Dbam o to, aby złożone możliwości backendu były dostępne poprzez intuicyjne i wydajne pulpity wewnętrzne.",
+          "items": {
+            "ui_stack": "Budowanie responsywnych aplikacji w React i TypeScript",
+            "styling": "Szybkie tworzenie UI z Tailwind CSS i Material UI",
+            "tooling": "Budowanie responsywnych narzędzi do operacji wewnętrznych"
+          }
         }
       }
     },
+    "skills": {
+    "title": "Kluczowe Kompetencje Techniczne",
+    "groups": [
+      { "id": "core-stack", "label": "Core Stack", "skills": ["Java", "Spring Framework", "REST APIs", "SQL", "Docker", "Kubernetes", "Argo CD", "Jenkins", "GitLab CI/CD"] },
+      { "id": "backend", "label": "Inżynieria Backend", "skills": ["Java", "Kotlin", "Go", "Python", "Node.js", "Django", "REST", "Swagger / OpenAPI", "OAuth2", "JWT"] },
+      { "id": "test-automation", "label": "Automatyzacja i Wydajność", "skills": ["JUnit", "TestNG", "PyTest", "Robot Framework", "JMeter", "Locust", "Selenium"] },
+      { "id": "devops", "label": "DevOps i Infrastruktura", "skills": ["Docker", "Kubernetes", "Argo CD", "Ansible", "Jenkins", "GitLab CI/CD", "Bash", "Groovy", "Ubuntu", "Jinja"] },
+      { "id": "frontend", "label": "Frontend", "skills": ["React", "JavaScript", "TypeScript", "HTML", "CSS", "Tailwind CSS", "Material UI"] },
+      { "id": "observability", "label": "Monitoring i Observability", "skills": ["Prometheus", "Grafana", "Elasticsearch", "Kibana"] },
+      { "id": "messaging", "label": "Komunikacja i Integracja", "skills": ["Kafka", "RabbitMQ"] },
+      { "id": "ways-of-working", "label": "Metodyki i Dostarczanie", "skills": ["Scrum", "Agile", "CI/CD Process Ownership", "Release Management"] }
+    ],
+    "footer": {
+      "totalStack": "Core Stack",
+      "technologies": "{count} Technologii",
+      "experience": "Doświadczenie",
+      "years": "{count}+ Lat",
+      "focus": "Specjalizacja",
+      "enterprise": "Enterprise"
+    },
+    "searchPlaceholder": "Szukaj umiejętności...",
+    "noResults": "Nie znaleziono umiejętności pasujących do \"{query}\""
+  },
     "projects": {
       "name": "Projekty",
       "projectAName": "Moje Portfolio",
