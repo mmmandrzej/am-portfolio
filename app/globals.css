@@ -31,3 +31,13 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px; /* Prevents the header from covering the section title */
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
