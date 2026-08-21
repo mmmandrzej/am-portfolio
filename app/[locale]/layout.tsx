@@ -40,6 +40,7 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       className={`${geistSans.variable} ${geistMono.variable}`}
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
     >
       <head>
@@ -58,7 +59,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   );
 }
 
-// todo - https://next-intl.dev/docs/routing/setup#static-rendering
+// Pre-generate pages for all supported locales
+// https://next-intl.dev/docs/routing/setup#static-rendering
 export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "pl" }, { locale: "ru" }];
 }

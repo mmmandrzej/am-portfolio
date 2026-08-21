@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import dynamic from 'next/dynamic';
 import { Menu, X, Home, User, Briefcase, Mail } from "lucide-react";
@@ -13,6 +13,7 @@ const LanguageSwitcher = dynamic(() => import('./LanguageSwitcher'), { ssr: fals
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
   const locale = useLocale();
   const t = useTranslations("HomePage");
 
@@ -22,6 +23,36 @@ export default function Header() {
     { name: t("nav.projects"), href: "#projects", icon: <Briefcase className="w-4 h-4" /> },
     { name: t("nav.contact"), href: "#contact", icon: <Mail className="w-4 h-4" /> },
   ];
+
+  useEffect(() => {
+  const sectionIds = ["home", "about", "projects", "contact"];
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visibleEntry = entries.find(
+        (entry) => entry.isIntersecting
+      );
+
+      if (visibleEntry) {
+        setActiveSection(visibleEntry.target.id);
+      }
+    },
+    {
+      rootMargin: "-35% 0px -55% 0px",
+      threshold: 0,
+    }
+  );
+
+  sectionIds.forEach((id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      observer.observe(section);
+    }
+  });
+
+  return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="fixed top-0 w-full z-50 transition-all duration-300">
@@ -35,16 +66,29 @@ export default function Header() {
 
           {/* DESKTOP NAVIGATION */}
           <nav className="hidden md:flex items-center gap-x-6 lg:gap-x-8"> 
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors relative group whitespace-nowrap"
-              >
-                {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-emerald-500 transition-all group-hover:w-full" />
-              </a>
-            ))}
+            {navLinks.map((link) => {
+              const sectionId = link.href.substring(1);
+              const isActive = activeSection === sectionId;
+
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors relative group whitespace-nowrap ${
+                    isActive
+                      ? "text-emerald-600 dark:text-emerald-400"
+                      : "text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400"
+                  }`}
+                >
+                  {link.name}
+                  <span
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-emerald-500 transition-all duration-300 ${
+                      isActive ? "w-full" : "w-0 group-hover:w-full"
+                    }`}
+                  />
+                </a>
+              );
+            })}
           </nav>
 
           {/* RIGHT ACTIONS */}
@@ -70,19 +114,34 @@ export default function Header() {
       {/* MOBILE MENU OVERLAY */}
       <div className={`md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}`}>
         <nav className="flex flex-col p-6 gap-4">
-          {navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setIsOpen(false)}
-              className="flex items-center gap-4 text-lg font-semibold text-gray-900 dark:text-white hover:text-emerald-500"
-            >
-              <span className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600">
-                {link.icon}
-              </span>
-              {link.name}
-            </a>
-          ))}
+          {navLinks.map((link) => {
+            const sectionId = link.href.substring(1);
+            const isActive = activeSection === sectionId;
+
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`flex items-center gap-4 text-lg font-semibold transition-colors ${
+                  isActive
+                    ? "text-emerald-600 dark:text-emerald-400"
+                    : "text-gray-900 dark:text-white hover:text-emerald-500"
+                }`}
+              >
+                <span
+                  className={`p-2 rounded-lg transition-colors ${
+                    isActive
+                      ? "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400"
+                      : "bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600"
+                  }`}
+                >
+                  {link.icon}
+                </span>
+                {link.name}
+              </a>
+            );
+          })}
           {/* Switchers inside Mobile Menu for small screens */}
           <div className="sm:hidden flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
             <LanguageSwitcher />
